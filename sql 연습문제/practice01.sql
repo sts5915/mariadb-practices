@@ -1,6 +1,6 @@
 -- 문제1.
 -- 사번이 10944인 사원의 이름은(전체 이름)
-select concat( first_name,'', last_name) as '이름'
+select concat( first_name,'', last_name) as '10944'
 	from employees
     where emp_no = 10944;
 -- 정답 : RemkoZyda
