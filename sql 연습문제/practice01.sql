@@ -62,7 +62,7 @@ select count(*)
 
 -- 문제11
 -- 사번이 13250(Zeydy)인 지원이 직책 변경 상황을 시간순으로 출력해보세요.
-select title
+select title as '13250(zeydy)'
 	from titles
     where emp_no='13250'
     order by timestamp(title) asc;
