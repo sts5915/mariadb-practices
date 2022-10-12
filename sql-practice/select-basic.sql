@@ -54,6 +54,12 @@ select first_name, gender, hire_date
 	from employees
    where gender='m'
 order by hire_date;
+
+-- 예제 3 직원들의 사번, 월급을 사번(asc), 월급순(desc)으로 출력하세요
+select emp_no, salary
+	from salaries
+order by emp_no asc, salary desc;
+
      
 
 
