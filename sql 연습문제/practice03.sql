@@ -11,6 +11,7 @@ order by b.salary desc;
     from employees a
 	join titles b on a.emp_no = b.emp_no
 order by concat(a.first_name,'',a.last_name);
+
 -- 문제3.
 -- 전체 사원의 사번, 이름, 현재 부서를 이름 순서로 출력하세요.
   select a.emp_no as '사번', concat(a.first_name,'',a.last_name) as '이름', c.dept_name as '부서'
@@ -18,6 +19,7 @@ order by concat(a.first_name,'',a.last_name);
     join dept_emp b on a.emp_no = b.emp_no 
     join departments c on b.dept_no = c.dept_no
 order by concat(a.first_name,'',a.last_name);
+
 -- 문제4.
 -- 전체 사원의 사번, 이름, 연봉, 직책, 부서를 모두 이름 순서로 출력합니다.
   select a.emp_no as '사번', concat(a.first_name,'',a.last_name) as '이름',
