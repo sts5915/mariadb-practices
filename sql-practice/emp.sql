@@ -1,0 +1,21 @@
+DROP TABLE IF EXISTS `emp` ;
+
+DROP TABLE IF EXISTS `dept` ;
+
+CREATE TABLE IF NOT EXISTS `dept` (
+  `no` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`no`))
+ENGINE = InnoDB;
+
+CREATE TABLE IF NOT EXISTS `emp` (
+  `no` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NOT NULL,
+  `dept_no` INT NULL,
+  PRIMARY KEY (`no`),
+  CONSTRAINT `fk_emp_dept`
+    FOREIGN KEY (`dept_no`)
+    REFERENCES `dept` (`no`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
